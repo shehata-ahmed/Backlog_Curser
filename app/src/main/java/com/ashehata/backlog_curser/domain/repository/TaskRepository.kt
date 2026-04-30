@@ -14,6 +14,13 @@ interface TaskRepository {
     suspend fun updateTask(task: Task)
     suspend fun deleteTask(task: Task)
     fun getTaskCountByStatus(status: TaskStatus): Flow<Int>
+
+    /**
+     * Reactive total count of tasks across all statuses (To Do, In Progress, Done).
+     * Useful for the home-screen badge / app icon shortcuts.
+     */
+    fun getTotalTaskCount(): Flow<Int>
+
     suspend fun createTask(task: Task)
     suspend fun updateTaskStatus(taskId: Long, newStatus: TaskStatus)
     suspend fun deleteAll()
