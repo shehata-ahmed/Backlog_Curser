@@ -11,6 +11,7 @@ A lightweight Android app for managing personal tasks and projects using a Kanba
 - **Progress Tracking**: View task completion statistics and progress bars
 - **Offline-First**: All data stored locally using Room database
 - **Data Export**: Export tasks as JSON for backup
+- **Data Import**: Import previously exported JSON backups, with conflict-resolution prompts on duplicate task IDs
 - **Theme Support**: Light and dark mode with Material 3 design
 
 ## Technical Stack
