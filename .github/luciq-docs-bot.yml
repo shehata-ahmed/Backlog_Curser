@@ -8,6 +8,10 @@ trigger:
     - master
     - release/*
 
+  # Auto-run analysis when a PR is opened (no @-mention required).
+  # Still subject to base_branches and the global author allowlist.
+  on_pr_open: true
+
 docs:
   # All proposed docs file paths will be prefixed with this.
   path_prefix: docs/
