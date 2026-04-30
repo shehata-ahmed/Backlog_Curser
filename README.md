@@ -9,6 +9,7 @@ A lightweight Android app for managing personal tasks and projects using a Kanba
 - **Local Notifications**: Get reminders for task due dates with snooze functionality
 - **Task Filtering**: Filter tasks by tags or priority
 - **Progress Tracking**: View task completion statistics and progress bars
+- **Subtasks**: Break a task into a checklist of subtasks; parent task progress reflects subtask completion
 - **Offline-First**: All data stored locally using Room database
 - **Data Export**: Export tasks as JSON for backup
 - **Theme Support**: Light and dark mode with Material 3 design
