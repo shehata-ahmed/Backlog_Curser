@@ -1,0 +1,35 @@
+# Configuration for luciq-docs-bot on this repo.
+# Schema: https://github.com/shehata-ahmed/luciq-docs-bot-poc/blob/master/luciq-docs-bot.example.yml
+
+trigger:
+  # Only run on PRs targeting these base branches.
+  # Patterns: exact match | "*" (one segment) | "**" (any depth)
+  base_branches:
+    - master
+    - release/*
+
+docs:
+  # All proposed docs file paths will be prefixed with this.
+  path_prefix: docs/
+
+analysis:
+  model: claude-opus-4-7
+  effort: high
+
+  # Skip these path patterns when deciding doc-worthiness.
+  ignore_paths:
+    - "**/test/**"
+    - "**/.idea/**"
+    - "**/.github/**"
+    - "**/gradle/**"
+
+  max_diff_chars: 60000
+  max_changes_per_pr: 5
+
+  # Below this, the bot posts the proposal but skips opening a docs PR.
+  confidence_threshold: 0.6
+
+workflow:
+  auto_open_pr: true
+  auto_close_on_unmerge: true
+  require_human_approval: false
