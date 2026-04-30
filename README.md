@@ -8,6 +8,7 @@ A lightweight Android app for managing personal tasks and projects using a Kanba
 - **Kanban Board**: Organize tasks in a drag-and-drop board with To Do, In Progress, and Done columns
 - **Local Notifications**: Get reminders for task due dates with snooze functionality
 - **Task Filtering**: Filter tasks by tags or priority
+- **Task Search**: Full-text search across task titles, descriptions, and tags from the top app bar
 - **Progress Tracking**: View task completion statistics and progress bars
 - **Offline-First**: All data stored locally using Room database
 - **Data Export**: Export tasks as JSON for backup
