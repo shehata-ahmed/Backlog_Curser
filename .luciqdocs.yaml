@@ -36,4 +36,4 @@ analysis:
 workflow:
   auto_open_pr: true
   auto_close_on_unmerge: true
-  require_human_approval: false
+  require_human_approval: true
