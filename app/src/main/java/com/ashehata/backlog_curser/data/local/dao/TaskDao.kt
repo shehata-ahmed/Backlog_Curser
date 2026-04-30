@@ -19,6 +19,17 @@ interface TaskDao {
     @Query("SELECT * FROM tasks WHERE tags LIKE '%' || :tag || '%'")
     fun getTasksByTag(tag: String): Flow<List<Task>>
 
+    @Query(
+        """
+        SELECT * FROM tasks
+        WHERE title LIKE :pattern
+           OR description LIKE :pattern
+           OR tags LIKE :pattern
+        ORDER BY CASE status WHEN 'DONE' THEN 1 ELSE 0 END, updatedAt DESC
+        """
+    )
+    fun searchTasks(pattern: String): Flow<List<Task>>
+
     @Query("SELECT * FROM tasks WHERE id = :taskId")
     suspend fun getTaskById(taskId: Long): Task?
 

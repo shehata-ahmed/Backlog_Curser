@@ -21,6 +21,12 @@ class TaskRepositoryImpl @Inject constructor(
     override fun getTasksByTag(tag: String): Flow<List<Task>> =
         taskDao.getTasksByTag(tag)
 
+    override fun searchTasks(query: String): Flow<List<Task>> {
+        val trimmed = query.trim()
+        if (trimmed.isEmpty()) return taskDao.getAllTasks()
+        return taskDao.searchTasks("%$trimmed%")
+    }
+
     override suspend fun getTaskById(taskId: Long): Task? =
         taskDao.getTaskById(taskId)
 
