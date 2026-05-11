@@ -12,6 +12,7 @@ A lightweight Android app for managing personal tasks and projects using a Kanba
 - **Offline-First**: All data stored locally using Room database
 - **Data Export**: Export tasks as JSON for backup
 - **Theme Support**: Light and dark mode with Material 3 design
+- **Kanban Swimlanes**: Group board columns into horizontal swimlanes by tag, project, or assignee for easier visual triage
 
 ## Technical Stack
 
