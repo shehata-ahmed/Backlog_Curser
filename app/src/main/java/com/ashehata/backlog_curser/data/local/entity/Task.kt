@@ -19,6 +19,7 @@ data class Task(
     val category: String = "",
     val dueDate: Date? = null,
     val tags: List<String> = emptyList(),
+    val assignee: String? = null,
     val createdAt: Date = Date(),
     val updatedAt: Date = Date()
 )
