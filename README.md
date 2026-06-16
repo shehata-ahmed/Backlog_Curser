@@ -12,6 +12,8 @@ A lightweight Android app for managing personal tasks and projects using a Kanba
 - **Offline-First**: All data stored locally using Room database
 - **Data Export**: Export tasks as JSON for backup
 - **Theme Support**: Light and dark mode with Material 3 design
+- **Recurring Tasks**: Schedule tasks to repeat daily, weekly, monthly, or on custom intervals — completed instances are auto-archived and the next occurrence is generated automatically
+- **Quick Actions**: Long-press a task on the board to access quick edit, duplicate, archive, and delete actions without opening the detail view
 
 ## Technical Stack
 
