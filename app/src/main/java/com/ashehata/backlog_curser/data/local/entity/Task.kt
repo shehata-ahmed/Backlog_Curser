@@ -19,6 +19,13 @@ data class Task(
     val category: String = "",
     val dueDate: Date? = null,
     val tags: List<String> = emptyList(),
+    /**
+     * How many minutes before [dueDate] a reminder notification should fire. A value of `0` (the
+     * default) fires the reminder at the due time itself; positive values fire earlier (e.g. `15`
+     * for 15 minutes before, `60` for one hour before). Set to `null` to disable the reminder for
+     * this task entirely. Ignored when [dueDate] is `null`.
+     */
+    val reminderLeadMinutes: Int? = 0,
     val createdAt: Date = Date(),
     val updatedAt: Date = Date()
 )
